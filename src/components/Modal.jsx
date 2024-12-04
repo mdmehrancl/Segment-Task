@@ -215,37 +215,37 @@ const ModalSegmentMain = ({ setIsModalOpen, isModalOpen }) => {
             <FormControl>
               <div className="select-segment-main-form">
 
-              
-              {/* <InputLabel id="dropdown-menu-label">
+
+                {/* <InputLabel id="dropdown-menu-label">
                 Add Schema to segment
               </InputLabel> */}
-              <div className="chip">
-                <button
-                  className="rounded-chip"
-                  style={{
-                    backgroundColor: "#e3e5e7",
-                    color: "white",
-                    marginRight: "10px",
+                <div className="chip">
+                  <button
+                    className="rounded-chip"
+                    style={{
+                      backgroundColor: "#e3e5e7",
+                      color: "white",
+                      marginRight: "10px",
+                    }}
+                  ></button>
+                </div>
+                <Select
+
+                  labelId="dropdown-menu-label"
+                  value={Object.keys(selectedOption)[0]}
+                  onChange={handleOptionSelect}
+                  className="selected-container"
+                  InputLabelProps={{
+                    shrink: false,
                   }}
-                ></button>
-              </div>
-              <Select
-          
-                labelId="dropdown-menu-label"
-                value={Object.keys(selectedOption)[0]}
-                onChange={handleOptionSelect}
-                className="selected-container"
-                InputLabelProps={{
-                  shrink: false,
-                }}
-              >
-                <MenuItem value="">Add Schema to segment</MenuItem>
-                {segmentList?.map((item, index) => (
-                  <MenuItem key={index} value={item.value} name={item.label}>
-                    {item.label}
-                  </MenuItem>
-                ))}
-              </Select>
+                >
+                  <MenuItem value="">Add Schema to segment</MenuItem>
+                  {segmentList?.map((item, index) => (
+                    <MenuItem key={index} value={item.value} name={item.label}>
+                      {item.label}
+                    </MenuItem>
+                  ))}
+                </Select>
               </div>
             </FormControl>
           </div>
@@ -264,18 +264,22 @@ const ModalSegmentMain = ({ setIsModalOpen, isModalOpen }) => {
             </Button>
           </div>
         </DialogContent>
-        <DialogActions className="dialog-action">
-          <div className="save-btn-wrapper">
-            <div className="save-btn">
-              <Button variant="contained" color="primary" onClick={handleSave}>
-                Save the Segment
-              </Button>
-            </div>
-            <div className="close-btn">
-              <Button onClick={handleCloseModal}>cancel</Button>
-            </div>
+        {/* <DialogActions className="dialog-action"> */}
+        <div className="save-btn-wrapper">
+          <div className="save-btn">
+            <Button variant="contained" color="primary" sx={{ background: "#41b494 !important", borderRadius: "5px !important", }} onClick={handleSave}>
+              Save the Segment
+            </Button>
           </div>
-        </DialogActions>
+          <div className="close-btn">
+            <Button onClick={handleCloseModal} sx={{
+              background: "white !important",
+              color: "red !important",
+              borderRadius: "5px !important",
+            }}>cancel</Button>
+          </div>
+        </div>
+        {/* </DialogActions> */}
       </Dialog>
     </div>
   );
