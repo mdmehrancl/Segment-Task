@@ -17,7 +17,8 @@ const SegmentPageMain = () => {
           </Button>
         </div>
         <div className="segment-table-wrapper">
-          <h3 style={{ textAlign: "center" }}>Segment Table</h3>
+          <h3 >Segment Table</h3>
+          <br />
           <SegmentTableMain />
         </div>
 

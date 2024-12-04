@@ -53,7 +53,7 @@ const ModalSegmentMain = ({ setIsModalOpen, isModalOpen }) => {
     };
     dispatch(postSegmentData(savedSegment, setLoading));
 
-    console.log(savedSegment);
+    console.log(savedSegment, "main data");
     setSegmentName("");
     setSelectedOption({});
     setSelectedSchemas([]);
@@ -230,6 +230,7 @@ const ModalSegmentMain = ({ setIsModalOpen, isModalOpen }) => {
                 ></button>
               </div>
               <Select
+          
                 labelId="dropdown-menu-label"
                 value={Object.keys(selectedOption)[0]}
                 onChange={handleOptionSelect}
