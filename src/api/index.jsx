@@ -1,7 +1,7 @@
 import { setSegment } from "../redux/slicers/segmentSlice";
 
-const WEBHOOK_URL = "https://webhook.site/b4e9b5bc-5d76-4e7f-8b96-9ce9a3b22c52/requests?sorting=newest";
-const POST_WEBHOOK_URL = "https://webhook.site/b4e9b5bc-5d76-4e7f-8b96-9ce9a3b22c52"
+const WEBHOOK_URL = "https://webhook.site/e2b24e94-3b4b-4c5d-a897-8f0eaa5feb82/requests?sorting=newest";
+const POST_WEBHOOK_URL = "https://webhook.site/e2b24e94-3b4b-4c5d-a897-8f0eaa5feb82"
 
 
 export const getSegmentData = (setLoading) => async (dispatch) => {
@@ -11,7 +11,7 @@ export const getSegmentData = (setLoading) => async (dispatch) => {
             headers: {
                 'Content-Type': 'application/json; charset=UTF-8',
                 'Access-Control-Allow-Origin': '*',
-                'api-key': 'b4e9b5bc-5d76-4e7f-8b96-9ce9a3b22c52'
+                'api-key': 'e2b24e94-3b4b-4c5d-a897-8f0eaa5feb82'
             },
         });
 
